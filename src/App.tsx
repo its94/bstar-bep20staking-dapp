@@ -214,7 +214,7 @@ function App() {
       <div className="d-flex flex-warp justify-content-between py-2 px-5 bar">
         <div>
           <img src={Logo} alt="logo" width={180} height={80} />
-          <p>NOT READY, USE FUNCTIONS FOR TESTNET ONLY</p>
+          
         </div>
         <div className="d-flex">
           <span className="d-flex align-items-center">
@@ -226,6 +226,7 @@ function App() {
         </div>
       </div>
       <div className="d-flex flex-column px-5">
+      <p>NOT READY, USE FUNCTIONS FOR TESTNET ONLY</p>
         <div className="mt-5 d-flex justify-content-around">
           <button
             className="btn btn-grad mr-5"
