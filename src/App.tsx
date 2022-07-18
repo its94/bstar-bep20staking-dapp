@@ -5,18 +5,18 @@ import StakingContract from './contract/staking.json'
 import Logo from './assets/iamges/1_5032940684311528043.png'
 
 // const tokenAddress: string = '0x69efB039728013bB9f6Ab13015621f74C544ED3C'
-const tokenAddress: string = '0x85469cB22c5e8A063106C987c36C7587810E4bF1'
+const tokenAddress: string = '0x9eF984e1f9d99c87256e5349848Cef6Fbd1ebe28'
 
 // const stakingAddress:string = '0xf7f903fD2EE71Ce6D8473f5a46b7465EA834D79f';
 // const stakingAddress:string = '0x8Ca103877752de8E3f96438BAC9e4ecbf2c8221f';
 // const stakingAddress: string = '0xfE96906F64cEc6A991233efBe0bD92454C80518f'
-const stakingAddress: string = '0x35a18a65f36F153FE41fA5070846Cd100dDFB151' //mainnet
+const stakingAddress: string = '0x9eF984e1f9d99c87256e5349848Cef6Fbd1ebe28' //mainnet
 function App() {
   const [currentAccount, setCurrentAccount] = React.useState<string>('')
   const [option, setOption] = React.useState<number>(0)
   const [amount, setAmount] = React.useState<number>(0)
-  const [caption, setCaption] = React.useState<string>('Flexible Mode - 10%')
-  const [balance, setBalance] = React.useState<string>('0 IGRL')
+  const [caption, setCaption] = React.useState<string>('Flexible Mode - 2%')
+  const [balance, setBalance] = React.useState<string>('0 VRMC')
   const [stakingInfo, setStakingInfo] = React.useState<any>({
     startTime: '-',
     balance: '0 VRMC',
@@ -213,7 +213,8 @@ function App() {
     <div>
       <div className="d-flex flex-warp justify-content-between py-2 px-5 bar">
         <div>
-          <img src={Logo} alt="logo" width={80} height={80} />
+          <img src={Logo} alt="logo" width={180} height={80} />
+          <p>NOT READY, USE FUNCTIONS FOR TESTNET ONLY</p>
         </div>
         <div className="d-flex">
           <span className="d-flex align-items-center">
@@ -273,9 +274,9 @@ function App() {
           <table className="table mt-5">
             <thead>
               <tr>
-                <th>Time of Stake</th>
+                <th>Time</th>
                 <th>Amount</th>
-                <th>What option</th>
+                <th>Option</th>
                 <th>Expires</th>
                 <th>Unstake</th>
               </tr>
