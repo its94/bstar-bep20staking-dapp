@@ -2,7 +2,7 @@ import React from 'react'
 import { ethers } from 'ethers'
 import TokenContract from './contract/token.json'
 import StakingContract from './contract/staking.json'
-import Logo from './assets/iamges/logo.jpg'
+import Logo from './assets/iamges/1_5032940684311528043.png'
 
 // const tokenAddress: string = '0x69efB039728013bB9f6Ab13015621f74C544ED3C'
 const tokenAddress: string = '0x85469cB22c5e8A063106C987c36C7587810E4bF1'
@@ -19,7 +19,7 @@ function App() {
   const [balance, setBalance] = React.useState<string>('0 IGRL')
   const [stakingInfo, setStakingInfo] = React.useState<any>({
     startTime: '-',
-    balance: '0 IGRL',
+    balance: '0 VRMC',
     option: 'Flexible',
     expireTime: '-',
   })
@@ -194,7 +194,7 @@ function App() {
     setAmount(parseInt(val))
   }
   const deposit = async () => {
-    if(balance === '0 IGRL'){
+    if(balance === '0 VRMC'){
       await (window as any).tokenContract.approve(stakingAddress, amount*10**9)
       await (window as any).stakingContract.deposit(amount*10**9, option)
       alert('success');
@@ -228,31 +228,31 @@ function App() {
         <div className="mt-5 d-flex justify-content-around">
           <button
             className="btn btn-grad mr-5"
-            onClick={() => changeOption(0, 'Flexible Mode - 10%')}
+            onClick={() => changeOption(0, 'Flexible Mode - 2%')}
           >
-            Flexible Mode - 10%
+            Flexible Mode - 2%
           </button>
           <button
             className="btn btn-grad mr-5"
-            onClick={() => changeOption(1, '30 days - 25%')}
+            onClick={() => changeOption(1, '30 days - 3%')}
           >
-            30 days - 25%
+            30 days - 3%
           </button>
           <button
             className="btn btn-grad mr-5"
-            onClick={() => changeOption(2, '90 days - 40%')}
+            onClick={() => changeOption(2, '60 days - 8%')}
           >
-            90 days - 40%
+            60 days - 8%
           </button>
           <button
             className="btn btn-grad mr-5"
-            onClick={() => changeOption(3, '180 days - 70%')}
+            onClick={() => changeOption(3, '90 days - 20%')}
           >
-            180 days - 70%
+            90 days - 20%
           </button>
           <button
             className="btn btn-grad mr-5"
-            onClick={() => changeOption(4, '360 days - 90%')}
+            onClick={() => changeOption(4, '360 days - 20%')}
           >
             360 days - 90%
           </button>
