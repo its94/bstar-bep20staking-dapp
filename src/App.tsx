@@ -256,7 +256,7 @@ function App() {
             className="btn btn-grad mr-5"
             onClick={() => changeOption(4, '360 days - 20%')}
           >
-            360 days - 90%
+            360 days - 20%
           </button>
         </div>
         <div className="mt-5 d-flex justify-content-around align-items-center">
